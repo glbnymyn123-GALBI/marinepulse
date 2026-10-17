@@ -1,0 +1,227 @@
+Records: 351   identified: 295   stranded: 37
+
+Country x type counts
+ type     Dolphin  Whale  Monk seal  Dugong
+country                                   
+Lebanon       83     43         14       0
+Syria         16      5          1       0
+Gaza          20      0          1       0
+Egypt         98      8          0       6
+
+Chi-square = 52.08, df = 9, p (asymptotic) = 4.36e-08, p (Monte Carlo) = 6.00e-05
+Cramer's V = 0.243 (bias-corrected 0.222); 50% of expected counts < 5
+
+Adjusted residuals (|z| > 2.96 is significant after Bonferroni)
+          Dolphin  Whale  Monk seal  Dugong
+Lebanon    -5.28   4.88       3.30   -2.35
+Syria      -0.09   0.47      -0.19   -0.70
+Gaza        2.34  -2.30      -0.14   -0.69
+Egypt       4.25  -4.06      -3.22    3.16
+
+Type share by country, one-vs-rest z-tests
+     country       type   k    n  ...  ci_high  share_elsewhere      z  p_holm
+0   Lebanon    Dolphin  83  140  ...    0.671            0.865 -5.283   0.000
+1   Lebanon      Whale  43  140  ...    0.388            0.084  4.883   0.000
+2   Lebanon  Monk seal  14  140  ...    0.161            0.013  3.298   0.012
+3   Lebanon     Dugong   0  140  ...    0.027            0.039 -2.352   0.168
+4     Syria    Dolphin  16   22  ...    0.868            0.736 -0.092   1.000
+5     Syria      Whale   5   22  ...    0.434            0.187  0.466   1.000
+6     Syria  Monk seal   1   22  ...    0.218            0.055 -0.189   1.000
+7     Syria     Dugong   0   22  ...    0.149            0.022 -0.703   1.000
+8      Gaza    Dolphin  20   21  ...    0.992            0.719  2.337   0.168
+9      Gaza      Whale   0   21  ...    0.155            0.204 -2.302   0.168
+10     Gaza  Monk seal   1   21  ...    0.227            0.055 -0.139   1.000
+11     Gaza     Dugong   0   21  ...    0.155            0.022 -0.685   1.000
+12    Egypt    Dolphin  98  112  ...    0.924            0.650  4.247   0.000
+13    Egypt      Whale   8  112  ...    0.135            0.262 -4.057   0.001
+14    Egypt  Monk seal   0  112  ...    0.033            0.087 -3.218   0.014
+15    Egypt     Dugong   6  112  ...    0.112            0.000  3.163   0.016
+
+[16 rows x 10 columns]
+
+Annual report rates 2019-2025
+     country       type  reports  ...  ci_low  ci_high  p_month_at_least_one
+0   Lebanon    Dolphin       58  ...   6.292   10.711                 0.499
+1   Lebanon      Whale       34  ...   3.364    6.787                 0.333
+2   Lebanon  Monk seal       10  ...   0.685    2.627                 0.112
+3   Lebanon     Dugong        0  ...   0.000    0.527                 0.000
+4   Lebanon  All types      119  ...  14.083   20.343                 0.757
+5     Syria    Dolphin       14  ...   1.093    3.356                 0.154
+6     Syria      Whale        3  ...   0.088    1.252                 0.035
+7     Syria  Monk seal        1  ...   0.004    0.796                 0.012
+8     Syria     Dugong        0  ...   0.000    0.527                 0.000
+9     Syria  All types       21  ...   1.857    4.586                 0.221
+10     Gaza    Dolphin       15  ...   1.199    3.534                 0.164
+11     Gaza      Whale        0  ...   0.000    0.527                 0.000
+12     Gaza  Monk seal        1  ...   0.004    0.796                 0.012
+13     Gaza     Dugong        0  ...   0.000    0.527                 0.000
+14     Gaza  All types       17  ...   1.415    3.888                 0.183
+15    Egypt    Dolphin       76  ...   8.554   13.589                 0.595
+16    Egypt      Whale        3  ...   0.088    1.252                 0.035
+17    Egypt  Monk seal        0  ...   0.000    0.527                 0.000
+18    Egypt     Dugong        4  ...   0.156    1.463                 0.047
+19    Egypt  All types      104  ...  12.139   18.002                 0.710
+
+[20 rows x 7 columns]
+
+Reporting trend (negative binomial): {'window': '2015-2025', 'observations': 44, 'poisson_dispersion': np.float64(2.7190414992864964), 'quasi_poisson_irr': 1.2088970440658018, 'quasi_poisson_irr_ci': [1.133063003832505, 1.2898065316825662], 'quasi_poisson_p': 9.494142887742872e-09, 'nb_alpha': 0.26112991504861854, 'irr_per_year': 1.1876323922968441, 'irr_ci': [1.1095130200121084, 1.271252048234037], 'p': 7.285626898923706e-07, 'country_irr_vs_lebanon': {'Egypt': 0.7314847591560256, 'Gaza': 0.1778310158082672, 'Syria': 0.1759344187131379}}
+
+Dolphin group size
+    country   n  mean  median    sd  ci_low  ci_high  share_solitary
+0  Lebanon  83  3.34     3.0  5.40    2.16     4.52            0.31
+1    Syria  16  1.50     1.0  0.73    1.11     1.89            0.62
+2     Gaza  20  1.75     1.0  1.12    1.23     2.27            0.55
+3    Egypt  98  4.38     2.0  8.00    2.77     5.98            0.36
+Egypt vs Lebanon: {'n': [98, 83], 'mean': [np.float64(4.377551020408164), np.float64(3.3373493975903616)], 'welch_t': np.float64(1.0378283619295412), 'welch_df': np.float64(170.98481180692437), 'welch_p': np.float64(0.3008154006405168), 'log_welch_t': np.float64(0.27517844640083083), 'log_welch_p': np.float64(0.7834987018435651), 'geo_mean': [2.482801993571779, 2.4012821843540153], 'mwu_U': np.float64(3926.0), 'mwu_p': np.float64(0.6811957584323847), 'rank_biserial': np.float64(-0.03466928940250802), 'hedges_g': 0.1494442644659561}
+Kruskal: {'H': np.float64(14.960522410024915), 'p': np.float64(0.001850697944440124)}
+Pairwise MWU
+          a      b  median_a  median_b       U       p  p_holm
+0  Lebanon  Syria       3.0       1.0   986.0  0.0016  0.0094
+1  Lebanon   Gaza       3.0       1.0  1151.0  0.0058  0.0289
+2  Lebanon  Egypt       3.0       2.0  4208.0  0.6812  1.0000
+3    Syria   Gaza       1.0       1.0   146.0  0.6265  1.0000
+4    Syria  Egypt       1.0       2.0   473.0  0.0085  0.0341
+5     Gaza  Egypt       1.0       2.0   668.5  0.0206  0.0619
+By coast
+                    basin   n  mean  median
+0  Egypt (Mediterranean)  56  2.09     2.0
+1        Egypt (Red Sea)  28  8.57     5.0
+2     Egypt (Suez Canal)   7  2.57     2.0
+3  Egypt (unknown coast)   7  7.71     3.0
+4                   Gaza  20  1.75     1.0
+5                Lebanon  83  3.34     3.0
+6                  Syria  16  1.50     1.0
+Bottlenose only: {'n': [57, 76], 'mean': [np.float64(2.1578947368421053), np.float64(3.513157894736842)], 'median': [2.0, 3.0], 'geo_mean': [1.8191864972844995, 2.5560078170822633], 'welch_t': np.float64(-2.0300741641539397), 'welch_p': np.float64(0.04542880154875442), 'log_welch_t': np.float64(-3.063563244404312), 'log_welch_df': np.float64(129.59607788968754), 'log_welch_p': np.float64(0.002661009288138016), 'mwu_U': np.float64(1516.5), 'mwu_p': np.float64(0.0023702251729608467)}
+Uncensored only: {'n': [78, 74], 'mean': [np.float64(2.551282051282051), np.float64(3.2162162162162162)], 'welch_t': np.float64(-0.9347556238775667), 'welch_p': np.float64(0.35228869737793017)}
+Censored share: 0.14746543778801843
+
+Strandings by country
+    country  stranded    n   rate  ...  rate_elsewhere      z      p  p_holm
+0  Lebanon        15  162  0.093  ...           0.116 -0.724  0.469   0.938
+1    Syria         1   27  0.037  ...           0.111 -1.204  0.229   0.686
+2     Gaza         6   24  0.250  ...           0.095  2.390  0.017   0.067
+3    Egypt        15  138  0.109  ...           0.103  0.161  0.872   0.938
+
+[4 rows x 10 columns] 
+MC p: 0.06836931630683693
+Strandings by type
+         type  stranded    n   rate  ci_low  ci_high
+0    Dolphin        28  217  0.129   0.091    0.180
+1      Whale         4   56  0.071   0.028    0.170
+2  Monk seal         0   16  0.000   0.000    0.194
+3     Dugong         0    6  0.000   0.000    0.390
+Whale vs dolphin Fisher: {'odds_ratio': np.float64(0.5192307692307693), 'p': np.float64(0.3501636234012555)}
+
+Seasonality
+    country    n     chi2  ...  summer_share  summer_expected  summer_binom_p
+0  Lebanon  161  71.1045  ...        0.3913           0.2519          0.0001
+1    Egypt  137  17.3537  ...        0.3577           0.2519          0.0057
+
+[2 rows x 8 columns]
+
+Data quality: {'unidentified_rate': {'Lebanon': 0.13580246913580246, 'Syria': 0.18518518518518517, 'Gaza': 0.125, 'Egypt': 0.18840579710144928}, 'unidentified_chi2': np.float64(1.88424472312875), 'unidentified_p': np.float64(0.5967760998692124), 'platform_mc_p': 0.0004999750012499375, 'platform_cramers_v': 0.19510744679775988}
+platform_raw  In water  Not stated  Shore  Small craft  Vessel
+country                                                       
+Lebanon              3          30     27            7      95
+Syria                0           4      3            0      20
+Gaza                 0           7      5            2      10
+Egypt               22          31     27            3      55
+
+R1_high_credibility_only: n=220 chi2=43.15 df=9 p_mc=3.00e-04 V=0.256
+type     Dolphin  Whale  Monk seal  Dugong
+country                                   
+Lebanon       66     39         13       0
+Syria         10      3          1       0
+Gaza          15      0          1       0
+Egypt         60      6          0       6
+         Dolphin  Whale  Monk seal  Dugong
+Lebanon    -4.37   4.34       2.66   -2.67
+Syria       0.23  -0.04       0.05   -0.65
+Gaza        2.25  -2.19      -0.09   -0.70
+Egypt       3.28  -3.38      -2.80    3.56
+
+R2_delphinidae_as_dolphins: n=295 chi2=43.55 df=9 p_mc=2.00e-04 V=0.222
+type     Dolphin  Whale  Monk seal  Dugong
+country                                   
+Lebanon       92     34         14       0
+Syria         16      5          1       0
+Gaza          20      0          1       0
+Egypt         99      7          0       6
+         Dolphin  Whale  Monk seal  Dugong
+Lebanon    -4.35   3.91       3.30   -2.35
+Syria      -0.49   0.96      -0.19   -0.70
+Gaza        2.06  -2.04      -0.14   -0.69
+Egypt       3.65  -3.46      -3.22    3.16
+
+R3_unidentified_from_notes: n=306 chi2=52.98 df=9 p_mc=1.00e-04 V=0.240
+type_inferred  Dolphin  Whale  Monk seal  Dugong
+country                                         
+Lebanon             88     45         14       0
+Syria               16      6          1       0
+Gaza                20      0          1       0
+Egypt              101      8          0       6
+         Dolphin  Whale  Monk seal  Dugong
+Lebanon    -5.21   4.83       3.25   -2.38
+Syria      -0.45   0.86      -0.20   -0.71
+Gaza        2.34  -2.32      -0.10   -0.67
+Egypt       4.40  -4.24      -3.19    3.19
+
+R4_egypt_split_by_coast: n=280 chi2=73.72 df=12 p_mc=5.00e-05 V=0.296
+type                   Dolphin  Whale  Monk seal  Dugong
+basin                                                   
+Lebanon                     83     43         14       0
+Syria                       16      5          1       0
+Gaza                        20      0          1       0
+Egypt (Mediterranean)       56      7          0       0
+Egypt (Red Sea)             28      1          0       5
+                       Dolphin  Whale  Monk seal  Dugong
+Lebanon                  -4.95   4.48       3.09   -2.26
+Syria                     0.02   0.33      -0.25   -0.66
+Gaza                      2.43  -2.38      -0.20   -0.64
+Egypt (Mediterranean)     3.31  -2.00      -2.22   -1.22
+Egypt (Red Sea)           1.37  -2.65      -1.53    6.07
+
+R5_mediterranean_only: n=246 chi2=26.87 df=6 p_mc=4.00e-04 V=0.234
+type                   Dolphin  Whale  Monk seal
+basin                                           
+Lebanon                     83     43         14
+Syria                       16      5          1
+Gaza                        20      0          1
+Egypt (Mediterranean)       56      7          0
+                       Dolphin  Whale  Monk seal
+Lebanon                  -4.71   3.62       2.56
+Syria                     0.17   0.04      -0.39
+Gaza                      2.55  -2.57      -0.34
+Egypt (Mediterranean)     3.61  -2.48      -2.43
+
+R6_possible_duplicates_removed: n=287 chi2=50.18 df=9 p_mc=5.00e-05 V=0.241
+type     Dolphin  Whale  Monk seal  Dugong
+country                                   
+Lebanon       82     43         13       0
+Syria         14      5          1       0
+Gaza          20      0          1       0
+Egypt         94      8          0       6
+         Dolphin  Whale  Monk seal  Dugong
+Lebanon    -5.06   4.79       3.07   -2.38
+Syria      -0.33   0.64      -0.05   -0.68
+Gaza        2.37  -2.34      -0.10   -0.70
+Egypt       4.12  -4.02      -3.09    3.19
+
+Profile: {"records": 351, "by_country": {"Lebanon": 162, "Egypt": 138, "Syria": 27, "Gaza": 24}, "by_type": {"Dolphin": 217, "Unidentified": 56, "Whale": 56, "Monk seal": 16, "Dugong": 6}, "dated": 349, "date_range": ["2014-04-29", "2026-08-31"], "with_coordinates": 277, "stranded": 37, "credibility": {"high": 220, "medium": 56, "unrated": 54, "low": 21}, "egypt_by_coast": {"Egypt (Mediterranean)": 84, "Egypt (Red Sea)": 36, "Egypt (unknown coast)": 11, "Egypt (Suez Canal)": 7}}
+
+Data issues to fix in the sheet (14):
+ sheet_row               issue                                                                           detail
+        13  possible duplicate                                                              same post as row 12
+        24  possible duplicate                                                              same post as row 23
+        90  possible duplicate                                                              same post as row 85
+        94  possible duplicate                                                              same post as row 93
+       104  possible duplicate                                                             same post as row 103
+       171        invalid date                                         '22/05/202' cannot be read as DD/MM/YYYY
+       218  possible duplicate                                                             same post as row 145
+       276  possible duplicate                                                             same post as row 260
+       284  possible duplicate                                                             same post as row 248
+       287  possible duplicate                                                             same post as row 134
+       304 invalid coordinates '532534942, 35.651266022468235' is outside the globe; record kept but not mapped
+       353           empty row                           no source, date or species; excluded from the analysis
+       354           empty row                           no source, date or species; excluded from the analysis
+       355           empty row                           no source, date or species; excluded from the analysis

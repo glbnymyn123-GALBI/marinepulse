@@ -1,0 +1,21 @@
+country,type,reports,per_year,ci_low,ci_high,p_month_at_least_one
+Lebanon,Dolphin,58,8.2857,6.2917,10.7112,0.4987
+Lebanon,Whale,34,4.8571,3.3637,6.7874,0.3329
+Lebanon,Monk seal,10,1.4286,0.6851,2.6272,0.1122
+Lebanon,Dugong,0,0.0,0.0,0.527,0.0
+Lebanon,All types,119,17.0,14.0831,20.343,0.7575
+Syria,Dolphin,14,2.0,1.0934,3.3557,0.1535
+Syria,Whale,3,0.4286,0.0884,1.2525,0.0351
+Syria,Monk seal,1,0.1429,0.0036,0.7959,0.0118
+Syria,Dugong,0,0.0,0.0,0.527,0.0
+Syria,All types,21,3.0,1.857,4.5858,0.2212
+Gaza,Dolphin,15,2.1429,1.1993,3.5343,0.1635
+Gaza,Whale,0,0.0,0.0,0.527,0.0
+Gaza,Monk seal,1,0.1429,0.0036,0.7959,0.0118
+Gaza,Dugong,0,0.0,0.0,0.527,0.0
+Gaza,All types,17,2.4286,1.4147,3.8884,0.1832
+Egypt,Dolphin,76,10.8571,8.5542,13.5893,0.5954
+Egypt,Whale,3,0.4286,0.0884,1.2525,0.0351
+Egypt,Monk seal,0,0.0,0.0,0.527,0.0
+Egypt,Dugong,4,0.5714,0.1557,1.4631,0.0465
+Egypt,All types,104,14.8571,12.1394,18.0019,0.7101

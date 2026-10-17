@@ -1,0 +1,17 @@
+# Publish only the MarinePulse dashboard. Everything else in this folder
+# (other tools, design drafts, the old Code.html, older sheets) stays local.
+/*
+!/.gitignore
+!/.nojekyll
+!/index.html
+!/README.md
+!/assets/
+!/data/
+!/analysis/
+!/tests/
+!/tools/
+!/docs/
+
+.DS_Store
+__pycache__/
+*.pyc

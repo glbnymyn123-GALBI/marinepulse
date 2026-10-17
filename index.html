@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MarinePulse · Levant marine mammal sightings</title>
+  <meta name="description" content="Interactive map and statistical analysis of 354 marine mammal sighting reports from Lebanon, Syria, Gaza and Egypt, 2014-2026.">
+  <meta name="theme-color" content="#fcfcfb">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23161615'/%3E%3Cpath d='M6 19c3.3 0 3.3-3 6.6-3s3.3 3 6.7 3 3.3-3 6.7-3' fill='none' stroke='%23fcfcfb' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="assets/styles.css?v=11">
+  <script>
+    // Apply the saved theme before first paint (?theme=light|dark also works, for sharing).
+    try {
+      const q = new URLSearchParams(location.search).get('theme');
+      const t = q || localStorage.getItem('mp-theme');
+      if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="#map" aria-label="MarinePulse home">
+        <span class="brand-mark" aria-hidden="true"><i class="ph ph-waves"></i></span>
+        <span class="brand-name">MarinePulse</span>
+        <span class="brand-sub">Levant marine mammal sightings</span>
+      </a>
+      <nav class="tabs" role="tablist" aria-label="Views">
+        <button class="tab" role="tab" id="tab-map" aria-controls="view-map" data-view="map" aria-selected="true">Map</button>
+        <button class="tab" role="tab" id="tab-analysis" aria-controls="view-analysis" data-view="analysis" aria-selected="false">Analysis</button>
+        <button class="tab" role="tab" id="tab-report" aria-controls="view-report" data-view="report" aria-selected="false">Report</button>
+      </nav>
+      <div class="tools">
+        <div class="search" id="search">
+          <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+          <input id="searchInput" type="search" autocomplete="off" spellcheck="false"
+                 placeholder="Search place, species or lat, lng" aria-label="Search places, species or coordinates"
+                 role="combobox" aria-expanded="false" aria-controls="searchResults">
+          <div class="search-results" id="searchResults" role="listbox" hidden></div>
+        </div>
+        <button class="icon-btn search-toggle" id="searchToggle" aria-label="Search"><i class="ph ph-magnifying-glass"></i></button>
+        <button class="btn" id="csvBtn" title="Load a sightings CSV (or drop it anywhere on the page)">
+          <i class="ph ph-upload-simple" aria-hidden="true"></i><span class="btn-label">Load CSV</span>
+        </button>
+        <input type="file" id="csvInput" accept=".csv,text/csv" hidden>
+        <button class="icon-btn" id="themeBtn" aria-label="Switch theme"><i class="ph ph-moon"></i></button>
+        <button class="icon-btn" id="aboutBtn" aria-label="About this project"><i class="ph ph-info"></i></button>
+      </div>
+    </header>
+
+    <main class="view-stack">
+      <!-- MAP ------------------------------------------------------------------ -->
+      <section class="view view-map" id="view-map" role="tabpanel" aria-labelledby="tab-map">
+        <div class="filterbar" aria-label="Filters">
+          <div class="filter">
+            <span class="filter-label" id="lbl-country">Country</span>
+            <div class="seg" id="countrySeg" role="group" aria-labelledby="lbl-country"></div>
+          </div>
+          <div class="filter">
+            <span class="filter-label" id="lbl-type">Species</span>
+            <button class="select-btn" id="typeBtn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="lbl-type typeBtnLabel">
+              <span id="typeBtnLabel">All species</span><i class="ph ph-caret-down" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="filter">
+            <span class="filter-label" id="lbl-status">Status</span>
+            <div class="seg" id="statusSeg" role="group" aria-labelledby="lbl-status"></div>
+          </div>
+          <div class="filter-summary">
+            <span id="filterCount" aria-live="polite"></span>
+            <button class="link-btn" id="clearFilters" hidden>Clear filters</button>
+          </div>
+        </div>
+
+        <div class="map-layout">
+          <div class="map-wrap">
+            <div id="mapCanvas" aria-label="Map of sighting sites"></div>
+            <div class="map-ctrl">
+              <button id="zoomIn" aria-label="Zoom in"><i class="ph ph-plus"></i></button>
+              <button id="zoomOut" aria-label="Zoom out"><i class="ph ph-minus"></i></button>
+              <button id="zoomFit" aria-label="Fit all visible sites"><i class="ph ph-corners-out"></i></button>
+            </div>
+            <div class="legend" id="legend"></div>
+            <div class="map-empty" id="mapEmpty" hidden></div>
+          </div>
+
+          <aside class="panel" id="panel" aria-label="Details">
+            <section class="record" id="record" aria-live="polite"></section>
+            <section class="panel-section kpis" id="kpis"></section>
+            <section class="panel-section">
+              <div class="section-title">
+                <h2>Reports per year</h2>
+                <div class="legend-inline">
+                  <span><i class="swatch sw-water"></i>In water</span>
+                  <span><i class="swatch sw-stranded"></i>Stranded</span>
+                </div>
+              </div>
+              <div id="yearChart"></div>
+            </section>
+            <section class="panel-section">
+              <div class="section-title"><h2>Status</h2><span class="note">Select to filter the map</span></div>
+              <div class="rows" id="statusRows"></div>
+            </section>
+            <section class="panel-section">
+              <div class="section-title"><h2>By type</h2><span class="note" id="typeNote"></span></div>
+              <div class="rows" id="typeRows"></div>
+            </section>
+            <div class="panel-foot" id="panelFoot"></div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ANALYSIS ---------------------------------------------------------------- -->
+      <section class="view view-doc" id="view-analysis" role="tabpanel" aria-labelledby="tab-analysis" hidden></section>
+
+      <!-- REPORT ------------------------------------------------------------------- -->
+      <section class="view view-doc" id="view-report" role="tabpanel" aria-labelledby="tab-report" hidden></section>
+    </main>
+  </div>
+
+  <div class="popover" id="catalog" role="listbox" aria-label="Species" hidden></div>
+  <div id="tooltip" role="tooltip"></div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <div class="dropzone" id="dropzone" hidden><div>Drop the CSV to load it</div></div>
+
+  <dialog class="about" id="about" aria-labelledby="aboutTitle">
+    <button class="icon-btn about-close" id="aboutClose" aria-label="Close"><i class="ph ph-x"></i></button>
+    <div class="about-body">
+      <h2 id="aboutTitle">About MarinePulse</h2>
+      <p>MarinePulse maps and analyses public reports of dolphins, whales, Mediterranean monk seals and dugongs along the coasts of Lebanon, Syria, Gaza and Egypt. Each record was collected from social media, news and citizen-science posts, then reviewed for species, place, date, group size and credibility.</p>
+      <p>The Analysis tab tests whether each mammal type is reported differently from country to country, and every number on it is recomputed in the browser from the loaded file. The same analysis runs in Python in <span class="code">analysis/marine_mammal_stats.py</span>.</p>
+      <dl>
+        <dt>Research</dt><dd>Gal Binyamin, for IMMRAC (Israeli Marine Mammal Research and Assistance Center)</dd>
+        <dt>Data</dt><dd id="aboutData">354 reports, 2014-2026</dd>
+        <dt>Methods</dt><dd>Chi-square and Monte Carlo exact tests, adjusted residuals, two-proportion z-tests, Welch t-tests, Mann-Whitney U, Kruskal-Wallis, Poisson rates and regression</dd>
+        <dt>Built with</dt><dd>Leaflet, hand-written SVG charts, Python (pandas, SciPy, statsmodels)</dd>
+        <dt>Basemap</dt><dd>Esri World Gray Canvas</dd>
+      </dl>
+    </div>
+  </dialog>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+  <script src="data/sightings.js?v=11"></script>
+  <script src="assets/data.js?v=11"></script>
+  <script src="assets/stats.js?v=11"></script>
+  <script src="assets/analysis.js?v=11"></script>
+  <script src="assets/charts.js?v=11"></script>
+  <script src="assets/app.js?v=11"></script>
+</body>
+</html>

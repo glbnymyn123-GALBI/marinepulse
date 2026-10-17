@@ -1,0 +1,1379 @@
+{
+  "profile": {
+    "records": 351,
+    "by_country": {
+      "Lebanon": 162,
+      "Egypt": 138,
+      "Syria": 27,
+      "Gaza": 24
+    },
+    "by_type": {
+      "Dolphin": 217,
+      "Unidentified": 56,
+      "Whale": 56,
+      "Monk seal": 16,
+      "Dugong": 6
+    },
+    "dated": 349,
+    "date_range": [
+      "2014-04-29",
+      "2026-08-31"
+    ],
+    "with_coordinates": 277,
+    "stranded": 37,
+    "credibility": {
+      "high": 220,
+      "medium": 56,
+      "unrated": 54,
+      "low": 21
+    },
+    "egypt_by_coast": {
+      "Egypt (Mediterranean)": 84,
+      "Egypt (Red Sea)": 36,
+      "Egypt (unknown coast)": 11,
+      "Egypt (Suez Canal)": 7
+    }
+  },
+  "data_issues": [
+    {
+      "sheet_row": 13,
+      "issue": "possible duplicate",
+      "detail": "same post as row 12"
+    },
+    {
+      "sheet_row": 24,
+      "issue": "possible duplicate",
+      "detail": "same post as row 23"
+    },
+    {
+      "sheet_row": 90,
+      "issue": "possible duplicate",
+      "detail": "same post as row 85"
+    },
+    {
+      "sheet_row": 94,
+      "issue": "possible duplicate",
+      "detail": "same post as row 93"
+    },
+    {
+      "sheet_row": 104,
+      "issue": "possible duplicate",
+      "detail": "same post as row 103"
+    },
+    {
+      "sheet_row": 171,
+      "issue": "invalid date",
+      "detail": "'22/05/202' cannot be read as DD/MM/YYYY"
+    },
+    {
+      "sheet_row": 218,
+      "issue": "possible duplicate",
+      "detail": "same post as row 145"
+    },
+    {
+      "sheet_row": 276,
+      "issue": "possible duplicate",
+      "detail": "same post as row 260"
+    },
+    {
+      "sheet_row": 284,
+      "issue": "possible duplicate",
+      "detail": "same post as row 248"
+    },
+    {
+      "sheet_row": 287,
+      "issue": "possible duplicate",
+      "detail": "same post as row 134"
+    },
+    {
+      "sheet_row": 304,
+      "issue": "invalid coordinates",
+      "detail": "'532534942, 35.651266022468235' is outside the globe; record kept but not mapped"
+    },
+    {
+      "sheet_row": 353,
+      "issue": "empty row",
+      "detail": "no source, date or species; excluded from the analysis"
+    },
+    {
+      "sheet_row": 354,
+      "issue": "empty row",
+      "detail": "no source, date or species; excluded from the analysis"
+    },
+    {
+      "sheet_row": 355,
+      "issue": "empty row",
+      "detail": "no source, date or species; excluded from the analysis"
+    }
+  ],
+  "composition": {
+    "n": 295,
+    "chi2": 52.0822,
+    "dof": 9,
+    "p_asymptotic": 4.36138e-08,
+    "p_monte_carlo": 5.99994e-05,
+    "share_expected_below_5": 0.5,
+    "cramers_v": 0.24259,
+    "cramers_v_corrected": 0.221692,
+    "table": {
+      "Lebanon": {
+        "Dolphin": 83,
+        "Whale": 43,
+        "Monk seal": 14,
+        "Dugong": 0
+      },
+      "Syria": {
+        "Dolphin": 16,
+        "Whale": 5,
+        "Monk seal": 1,
+        "Dugong": 0
+      },
+      "Gaza": {
+        "Dolphin": 20,
+        "Whale": 0,
+        "Monk seal": 1,
+        "Dugong": 0
+      },
+      "Egypt": {
+        "Dolphin": 98,
+        "Whale": 8,
+        "Monk seal": 0,
+        "Dugong": 6
+      }
+    },
+    "adj_residuals": {
+      "Lebanon": {
+        "Dolphin": -5.283,
+        "Whale": 4.883,
+        "Monk seal": 3.298,
+        "Dugong": -2.352
+      },
+      "Syria": {
+        "Dolphin": -0.092,
+        "Whale": 0.466,
+        "Monk seal": -0.189,
+        "Dugong": -0.703
+      },
+      "Gaza": {
+        "Dolphin": 2.337,
+        "Whale": -2.302,
+        "Monk seal": -0.139,
+        "Dugong": -0.685
+      },
+      "Egypt": {
+        "Dolphin": 4.247,
+        "Whale": -4.057,
+        "Monk seal": -3.218,
+        "Dugong": 3.163
+      }
+    },
+    "bonferroni_z_crit": 2.95517
+  },
+  "likelihood": [
+    {
+      "country": "Lebanon",
+      "type": "Dolphin",
+      "k": 83,
+      "n": 140,
+      "share": 0.592857,
+      "ci_low": 0.51005,
+      "ci_high": 0.670704,
+      "share_elsewhere": 0.864516,
+      "diff_pp": -27.1659,
+      "z": -5.28309,
+      "p": 1.27025e-07,
+      "p_holm": 2.0324e-06
+    },
+    {
+      "country": "Lebanon",
+      "type": "Whale",
+      "k": 43,
+      "n": 140,
+      "share": 0.307143,
+      "ci_low": 0.23673,
+      "ci_high": 0.387856,
+      "share_elsewhere": 0.083871,
+      "diff_pp": 22.3272,
+      "z": 4.88295,
+      "p": 1.04512e-06,
+      "p_holm": 1.56768e-05
+    },
+    {
+      "country": "Lebanon",
+      "type": "Monk seal",
+      "k": 14,
+      "n": 140,
+      "share": 0.1,
+      "ci_low": 0.0605061,
+      "ci_high": 0.160859,
+      "share_elsewhere": 0.0129032,
+      "diff_pp": 8.70968,
+      "z": 3.29823,
+      "p": 0.000972966,
+      "p_holm": 0.0116756
+    },
+    {
+      "country": "Lebanon",
+      "type": "Dugong",
+      "k": 0,
+      "n": 140,
+      "share": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0267062,
+      "share_elsewhere": 0.0387097,
+      "diff_pp": -3.87097,
+      "z": -2.35199,
+      "p": 0.0186732,
+      "p_holm": 0.168058
+    },
+    {
+      "country": "Syria",
+      "type": "Dolphin",
+      "k": 16,
+      "n": 22,
+      "share": 0.727273,
+      "ci_low": 0.518483,
+      "ci_high": 0.868492,
+      "share_elsewhere": 0.736264,
+      "diff_pp": -0.899101,
+      "z": -0.0919888,
+      "p": 0.926707,
+      "p_holm": 1.0
+    },
+    {
+      "country": "Syria",
+      "type": "Whale",
+      "k": 5,
+      "n": 22,
+      "share": 0.227273,
+      "ci_low": 0.10123,
+      "ci_high": 0.4344,
+      "share_elsewhere": 0.186813,
+      "diff_pp": 4.04595,
+      "z": 0.465513,
+      "p": 0.641564,
+      "p_holm": 1.0
+    },
+    {
+      "country": "Syria",
+      "type": "Monk seal",
+      "k": 1,
+      "n": 22,
+      "share": 0.0454545,
+      "ci_low": 0.00806943,
+      "ci_high": 0.21798,
+      "share_elsewhere": 0.0549451,
+      "diff_pp": -0.949051,
+      "z": -0.189074,
+      "p": 0.850035,
+      "p_holm": 1.0
+    },
+    {
+      "country": "Syria",
+      "type": "Dugong",
+      "k": 0,
+      "n": 22,
+      "share": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.148655,
+      "share_elsewhere": 0.021978,
+      "diff_pp": -2.1978,
+      "z": -0.702535,
+      "p": 0.482346,
+      "p_holm": 1.0
+    },
+    {
+      "country": "Gaza",
+      "type": "Dolphin",
+      "k": 20,
+      "n": 21,
+      "share": 0.952381,
+      "ci_low": 0.773306,
+      "ci_high": 0.991544,
+      "share_elsewhere": 0.718978,
+      "diff_pp": 23.3403,
+      "z": 2.33736,
+      "p": 0.0194207,
+      "p_holm": 0.168058
+    },
+    {
+      "country": "Gaza",
+      "type": "Whale",
+      "k": 0,
+      "n": 21,
+      "share": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.154639,
+      "share_elsewhere": 0.20438,
+      "diff_pp": -20.438,
+      "z": -2.30166,
+      "p": 0.0213546,
+      "p_holm": 0.168058
+    },
+    {
+      "country": "Gaza",
+      "type": "Monk seal",
+      "k": 1,
+      "n": 21,
+      "share": 0.047619,
+      "ci_low": 0.00845599,
+      "ci_high": 0.226694,
+      "share_elsewhere": 0.0547445,
+      "diff_pp": -0.712548,
+      "z": -0.138947,
+      "p": 0.889492,
+      "p_holm": 1.0
+    },
+    {
+      "country": "Gaza",
+      "type": "Dugong",
+      "k": 0,
+      "n": 21,
+      "share": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.154639,
+      "share_elsewhere": 0.0218978,
+      "diff_pp": -2.18978,
+      "z": -0.685129,
+      "p": 0.493263,
+      "p_holm": 1.0
+    },
+    {
+      "country": "Egypt",
+      "type": "Dolphin",
+      "k": 98,
+      "n": 112,
+      "share": 0.875,
+      "ci_low": 0.801069,
+      "ci_high": 0.92406,
+      "share_elsewhere": 0.650273,
+      "diff_pp": 22.4727,
+      "z": 4.2474,
+      "p": 2.16265e-05,
+      "p_holm": 0.000302771
+    },
+    {
+      "country": "Egypt",
+      "type": "Whale",
+      "k": 8,
+      "n": 112,
+      "share": 0.0714286,
+      "ci_low": 0.0366359,
+      "ci_high": 0.134645,
+      "share_elsewhere": 0.262295,
+      "diff_pp": -19.0867,
+      "z": -4.05679,
+      "p": 4.97522e-05,
+      "p_holm": 0.000646778
+    },
+    {
+      "country": "Egypt",
+      "type": "Monk seal",
+      "k": 0,
+      "n": 112,
+      "share": 0.0,
+      "ci_low": 3.46945e-18,
+      "ci_high": 0.0331613,
+      "share_elsewhere": 0.0874317,
+      "diff_pp": -8.74317,
+      "z": -3.21775,
+      "p": 0.001292,
+      "p_holm": 0.014212
+    },
+    {
+      "country": "Egypt",
+      "type": "Dugong",
+      "k": 6,
+      "n": 112,
+      "share": 0.0535714,
+      "ci_low": 0.0247809,
+      "ci_high": 0.11197,
+      "share_elsewhere": 0.0,
+      "diff_pp": 5.35714,
+      "z": 3.1634,
+      "p": 0.00155937,
+      "p_holm": 0.0155937
+    }
+  ],
+  "rates_2019_2025": [
+    {
+      "country": "Lebanon",
+      "type": "Dolphin",
+      "reports": 58,
+      "per_year": 8.28571,
+      "ci_low": 6.29169,
+      "ci_high": 10.7112,
+      "p_month_at_least_one": 0.498663
+    },
+    {
+      "country": "Lebanon",
+      "type": "Whale",
+      "reports": 34,
+      "per_year": 4.85714,
+      "ci_low": 3.36371,
+      "ci_high": 6.78737,
+      "p_month_at_least_one": 0.332864
+    },
+    {
+      "country": "Lebanon",
+      "type": "Monk seal",
+      "reports": 10,
+      "per_year": 1.42857,
+      "ci_low": 0.685056,
+      "ci_high": 2.62719,
+      "p_month_at_least_one": 0.112234
+    },
+    {
+      "country": "Lebanon",
+      "type": "Dugong",
+      "reports": 0,
+      "per_year": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.526983,
+      "p_month_at_least_one": 0.0
+    },
+    {
+      "country": "Lebanon",
+      "type": "All types",
+      "reports": 119,
+      "per_year": 17.0,
+      "ci_low": 14.0831,
+      "ci_high": 20.343,
+      "p_month_at_least_one": 0.757479
+    },
+    {
+      "country": "Syria",
+      "type": "Dolphin",
+      "reports": 14,
+      "per_year": 2.0,
+      "ci_low": 1.09342,
+      "ci_high": 3.35566,
+      "p_month_at_least_one": 0.153518
+    },
+    {
+      "country": "Syria",
+      "type": "Whale",
+      "reports": 3,
+      "per_year": 0.428571,
+      "ci_low": 0.0883817,
+      "ci_high": 1.25247,
+      "p_month_at_least_one": 0.0350841
+    },
+    {
+      "country": "Syria",
+      "type": "Monk seal",
+      "reports": 1,
+      "per_year": 0.142857,
+      "ci_low": 0.00361683,
+      "ci_high": 0.795949,
+      "p_month_at_least_one": 0.0118342
+    },
+    {
+      "country": "Syria",
+      "type": "Dugong",
+      "reports": 0,
+      "per_year": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.526983,
+      "p_month_at_least_one": 0.0
+    },
+    {
+      "country": "Syria",
+      "type": "All types",
+      "reports": 21,
+      "per_year": 3.0,
+      "ci_low": 1.85705,
+      "ci_high": 4.58582,
+      "p_month_at_least_one": 0.221199
+    },
+    {
+      "country": "Gaza",
+      "type": "Dolphin",
+      "reports": 15,
+      "per_year": 2.14286,
+      "ci_low": 1.19934,
+      "ci_high": 3.53432,
+      "p_month_at_least_one": 0.163536
+    },
+    {
+      "country": "Gaza",
+      "type": "Whale",
+      "reports": 0,
+      "per_year": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.526983,
+      "p_month_at_least_one": 0.0
+    },
+    {
+      "country": "Gaza",
+      "type": "Monk seal",
+      "reports": 1,
+      "per_year": 0.142857,
+      "ci_low": 0.00361683,
+      "ci_high": 0.795949,
+      "p_month_at_least_one": 0.0118342
+    },
+    {
+      "country": "Gaza",
+      "type": "Dugong",
+      "reports": 0,
+      "per_year": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.526983,
+      "p_month_at_least_one": 0.0
+    },
+    {
+      "country": "Gaza",
+      "type": "All types",
+      "reports": 17,
+      "per_year": 2.42857,
+      "ci_low": 1.41473,
+      "ci_high": 3.88838,
+      "p_month_at_least_one": 0.183216
+    },
+    {
+      "country": "Egypt",
+      "type": "Dolphin",
+      "reports": 76,
+      "per_year": 10.8571,
+      "ci_low": 8.55419,
+      "ci_high": 13.5893,
+      "p_month_at_least_one": 0.595362
+    },
+    {
+      "country": "Egypt",
+      "type": "Whale",
+      "reports": 3,
+      "per_year": 0.428571,
+      "ci_low": 0.0883817,
+      "ci_high": 1.25247,
+      "p_month_at_least_one": 0.0350841
+    },
+    {
+      "country": "Egypt",
+      "type": "Monk seal",
+      "reports": 0,
+      "per_year": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.526983,
+      "p_month_at_least_one": 0.0
+    },
+    {
+      "country": "Egypt",
+      "type": "Dugong",
+      "reports": 4,
+      "per_year": 0.571429,
+      "ci_low": 0.155695,
+      "ci_high": 1.46308,
+      "p_month_at_least_one": 0.046503
+    },
+    {
+      "country": "Egypt",
+      "type": "All types",
+      "reports": 104,
+      "per_year": 14.8571,
+      "ci_low": 12.1394,
+      "ci_high": 18.0019,
+      "p_month_at_least_one": 0.710064
+    }
+  ],
+  "reporting_trend": {
+    "window": "2015-2025",
+    "observations": 44,
+    "poisson_dispersion": 2.71904,
+    "quasi_poisson_irr": 1.2089,
+    "quasi_poisson_irr_ci": [
+      1.133063003832505,
+      1.2898065316825662
+    ],
+    "quasi_poisson_p": 9.49414e-09,
+    "nb_alpha": 0.26113,
+    "irr_per_year": 1.18763,
+    "irr_ci": [
+      1.1095130200121084,
+      1.271252048234037
+    ],
+    "p": 7.28563e-07,
+    "country_irr_vs_lebanon": {
+      "Egypt": 0.7314847591560256,
+      "Gaza": 0.1778310158082672,
+      "Syria": 0.1759344187131379
+    }
+  },
+  "group_size": {
+    "summary": [
+      {
+        "country": "Lebanon",
+        "n": 83,
+        "mean": 3.3373,
+        "median": 3.0,
+        "sd": 5.4039,
+        "ci_low": 2.1574,
+        "ci_high": 4.5173,
+        "share_solitary": 0.3133
+      },
+      {
+        "country": "Syria",
+        "n": 16,
+        "mean": 1.5,
+        "median": 1.0,
+        "sd": 0.7303,
+        "ci_low": 1.1109,
+        "ci_high": 1.8891,
+        "share_solitary": 0.625
+      },
+      {
+        "country": "Gaza",
+        "n": 20,
+        "mean": 1.75,
+        "median": 1.0,
+        "sd": 1.118,
+        "ci_low": 1.2267,
+        "ci_high": 2.2733,
+        "share_solitary": 0.55
+      },
+      {
+        "country": "Egypt",
+        "n": 98,
+        "mean": 4.3776,
+        "median": 2.0,
+        "sd": 7.9981,
+        "ci_low": 2.774,
+        "ci_high": 5.9811,
+        "share_solitary": 0.3571
+      }
+    ],
+    "censored_share": 0.147465,
+    "egypt_vs_lebanon": {
+      "n": [
+        98,
+        83
+      ],
+      "mean": [
+        4.37755,
+        3.33735
+      ],
+      "welch_t": 1.03783,
+      "welch_df": 170.985,
+      "welch_p": 0.300815,
+      "log_welch_t": 0.275178,
+      "log_welch_p": 0.783499,
+      "geo_mean": [
+        2.4828,
+        2.40128
+      ],
+      "mwu_U": 3926.0,
+      "mwu_p": 0.681196,
+      "rank_biserial": -0.0346693,
+      "hedges_g": 0.149444
+    },
+    "kruskal_all_countries": {
+      "H": 14.9605,
+      "p": 0.0018507
+    },
+    "pairwise_mwu": [
+      {
+        "a": "Lebanon",
+        "b": "Syria",
+        "median_a": 3.0,
+        "median_b": 1.0,
+        "U": 986.0,
+        "p": 0.00156556,
+        "p_holm": 0.00939336
+      },
+      {
+        "a": "Lebanon",
+        "b": "Gaza",
+        "median_a": 3.0,
+        "median_b": 1.0,
+        "U": 1151.0,
+        "p": 0.00577231,
+        "p_holm": 0.0288616
+      },
+      {
+        "a": "Lebanon",
+        "b": "Egypt",
+        "median_a": 3.0,
+        "median_b": 2.0,
+        "U": 4208.0,
+        "p": 0.681196,
+        "p_holm": 1.0
+      },
+      {
+        "a": "Syria",
+        "b": "Gaza",
+        "median_a": 1.0,
+        "median_b": 1.0,
+        "U": 146.0,
+        "p": 0.62653,
+        "p_holm": 1.0
+      },
+      {
+        "a": "Syria",
+        "b": "Egypt",
+        "median_a": 1.0,
+        "median_b": 2.0,
+        "U": 473.0,
+        "p": 0.00851486,
+        "p_holm": 0.0340595
+      },
+      {
+        "a": "Gaza",
+        "b": "Egypt",
+        "median_a": 1.0,
+        "median_b": 2.0,
+        "U": 668.5,
+        "p": 0.0206267,
+        "p_holm": 0.0618801
+      }
+    ],
+    "by_basin": [
+      {
+        "basin": "Egypt (Mediterranean)",
+        "n": 56,
+        "mean": 2.0893,
+        "median": 2.0
+      },
+      {
+        "basin": "Egypt (Red Sea)",
+        "n": 28,
+        "mean": 8.5714,
+        "median": 5.0
+      },
+      {
+        "basin": "Egypt (Suez Canal)",
+        "n": 7,
+        "mean": 2.5714,
+        "median": 2.0
+      },
+      {
+        "basin": "Egypt (unknown coast)",
+        "n": 7,
+        "mean": 7.7143,
+        "median": 3.0
+      },
+      {
+        "basin": "Gaza",
+        "n": 20,
+        "mean": 1.75,
+        "median": 1.0
+      },
+      {
+        "basin": "Lebanon",
+        "n": 83,
+        "mean": 3.3373,
+        "median": 3.0
+      },
+      {
+        "basin": "Syria",
+        "n": 16,
+        "mean": 1.5,
+        "median": 1.0
+      }
+    ],
+    "bottlenose_only": {
+      "n": [
+        57,
+        76
+      ],
+      "mean": [
+        2.15789,
+        3.51316
+      ],
+      "median": [
+        2.0,
+        3.0
+      ],
+      "geo_mean": [
+        1.81919,
+        2.55601
+      ],
+      "welch_t": -2.03007,
+      "welch_p": 0.0454288,
+      "log_welch_t": -3.06356,
+      "log_welch_df": 129.596,
+      "log_welch_p": 0.00266101,
+      "mwu_U": 1516.5,
+      "mwu_p": 0.00237023
+    },
+    "uncensored_only": {
+      "n": [
+        78,
+        74
+      ],
+      "mean": [
+        2.55128,
+        3.21622
+      ],
+      "welch_t": -0.934756,
+      "welch_p": 0.352289
+    }
+  },
+  "strandings": {
+    "by_country": [
+      {
+        "country": "Lebanon",
+        "stranded": 15,
+        "n": 162,
+        "rate": 0.0925926,
+        "ci_low": 0.056916,
+        "ci_high": 0.147143,
+        "rate_elsewhere": 0.116402,
+        "z": -0.724147,
+        "p": 0.468975,
+        "p_holm": 0.93795
+      },
+      {
+        "country": "Syria",
+        "stranded": 1,
+        "n": 27,
+        "rate": 0.037037,
+        "ci_low": 0.00656815,
+        "ci_high": 0.182835,
+        "rate_elsewhere": 0.111111,
+        "z": -1.20423,
+        "p": 0.228502,
+        "p_holm": 0.685505
+      },
+      {
+        "country": "Gaza",
+        "stranded": 6,
+        "n": 24,
+        "rate": 0.25,
+        "ci_low": 0.119994,
+        "ci_high": 0.448994,
+        "rate_elsewhere": 0.0948012,
+        "z": 2.38977,
+        "p": 0.016859,
+        "p_holm": 0.0674362
+      },
+      {
+        "country": "Egypt",
+        "stranded": 15,
+        "n": 138,
+        "rate": 0.108696,
+        "ci_low": 0.0669854,
+        "ci_high": 0.171601,
+        "rate_elsewhere": 0.103286,
+        "z": 0.161197,
+        "p": 0.871939,
+        "p_holm": 0.93795
+      }
+    ],
+    "country_mc_p": 0.0683693,
+    "by_type": [
+      {
+        "type": "Dolphin",
+        "stranded": 28,
+        "n": 217,
+        "rate": 0.129032,
+        "ci_low": 0.0908029,
+        "ci_high": 0.180167
+      },
+      {
+        "type": "Whale",
+        "stranded": 4,
+        "n": 56,
+        "rate": 0.0714286,
+        "ci_low": 0.028126,
+        "ci_high": 0.169754
+      },
+      {
+        "type": "Monk seal",
+        "stranded": 0,
+        "n": 16,
+        "rate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.193608
+      },
+      {
+        "type": "Dugong",
+        "stranded": 0,
+        "n": 6,
+        "rate": 0.0,
+        "ci_low": 0.0,
+        "ci_high": 0.390334
+      }
+    ],
+    "whale_vs_dolphin_fisher": {
+      "odds_ratio": 0.519231,
+      "p": 0.350164
+    }
+  },
+  "seasonality": [
+    {
+      "country": "Lebanon",
+      "n": 161,
+      "chi2": 71.1045,
+      "p": 7.52988e-11,
+      "peak_month": 6,
+      "summer_share": 0.391304,
+      "summer_expected": 0.251882,
+      "summer_binom_p": 0.000118111,
+      "by_month": [
+        6,
+        13,
+        9,
+        18,
+        28,
+        32,
+        18,
+        13,
+        6,
+        6,
+        11,
+        1
+      ]
+    },
+    {
+      "country": "Egypt",
+      "n": 137,
+      "chi2": 17.3537,
+      "p": 0.09784,
+      "peak_month": 7,
+      "summer_share": 0.357664,
+      "summer_expected": 0.251882,
+      "summer_binom_p": 0.00572157,
+      "by_month": [
+        7,
+        6,
+        12,
+        15,
+        16,
+        15,
+        17,
+        17,
+        7,
+        9,
+        7,
+        9
+      ]
+    }
+  ],
+  "data_quality": {
+    "unidentified_rate": {
+      "Lebanon": 0.13580246913580246,
+      "Syria": 0.18518518518518517,
+      "Gaza": 0.125,
+      "Egypt": 0.18840579710144928
+    },
+    "unidentified_chi2": 1.88424,
+    "unidentified_p": 0.596776,
+    "platform_counts": {
+      "Lebanon": {
+        "In water": 3,
+        "Not stated": 30,
+        "Shore": 27,
+        "Small craft": 7,
+        "Vessel": 95
+      },
+      "Syria": {
+        "In water": 0,
+        "Not stated": 4,
+        "Shore": 3,
+        "Small craft": 0,
+        "Vessel": 20
+      },
+      "Gaza": {
+        "In water": 0,
+        "Not stated": 7,
+        "Shore": 5,
+        "Small craft": 2,
+        "Vessel": 10
+      },
+      "Egypt": {
+        "In water": 22,
+        "Not stated": 31,
+        "Shore": 27,
+        "Small craft": 3,
+        "Vessel": 55
+      }
+    },
+    "platform_mc_p": 0.000499975,
+    "platform_cramers_v": 0.195107
+  },
+  "robustness": {
+    "R1_high_credibility_only": {
+      "n": 220,
+      "chi2": 43.1465,
+      "dof": 9,
+      "p_asymptotic": 2.02618e-06,
+      "p_monte_carlo": 0.000299985,
+      "share_expected_below_5": 0.5625,
+      "cramers_v": 0.255682,
+      "cramers_v_corrected": 0.228894,
+      "table": {
+        "Lebanon": {
+          "Dolphin": 66,
+          "Whale": 39,
+          "Monk seal": 13,
+          "Dugong": 0
+        },
+        "Syria": {
+          "Dolphin": 10,
+          "Whale": 3,
+          "Monk seal": 1,
+          "Dugong": 0
+        },
+        "Gaza": {
+          "Dolphin": 15,
+          "Whale": 0,
+          "Monk seal": 1,
+          "Dugong": 0
+        },
+        "Egypt": {
+          "Dolphin": 60,
+          "Whale": 6,
+          "Monk seal": 0,
+          "Dugong": 6
+        }
+      },
+      "adj_residuals": {
+        "Lebanon": {
+          "Dolphin": -4.368,
+          "Whale": 4.339,
+          "Monk seal": 2.658,
+          "Dugong": -2.671
+        },
+        "Syria": {
+          "Dolphin": 0.233,
+          "Whale": -0.036,
+          "Monk seal": 0.05,
+          "Dugong": -0.647
+        },
+        "Gaza": {
+          "Dolphin": 2.248,
+          "Whale": -2.194,
+          "Monk seal": -0.094,
+          "Dugong": -0.696
+        },
+        "Egypt": {
+          "Dolphin": 3.277,
+          "Whale": -3.378,
+          "Monk seal": -2.798,
+          "Dugong": 3.561
+        }
+      },
+      "bonferroni_z_crit": 2.95517
+    },
+    "R2_delphinidae_as_dolphins": {
+      "n": 295,
+      "chi2": 43.5452,
+      "dof": 9,
+      "p_asymptotic": 1.71159e-06,
+      "p_monte_carlo": 0.00019999,
+      "share_expected_below_5": 0.5,
+      "cramers_v": 0.221819,
+      "cramers_v_corrected": 0.198498,
+      "table": {
+        "Lebanon": {
+          "Dolphin": 92,
+          "Whale": 34,
+          "Monk seal": 14,
+          "Dugong": 0
+        },
+        "Syria": {
+          "Dolphin": 16,
+          "Whale": 5,
+          "Monk seal": 1,
+          "Dugong": 0
+        },
+        "Gaza": {
+          "Dolphin": 20,
+          "Whale": 0,
+          "Monk seal": 1,
+          "Dugong": 0
+        },
+        "Egypt": {
+          "Dolphin": 99,
+          "Whale": 7,
+          "Monk seal": 0,
+          "Dugong": 6
+        }
+      },
+      "adj_residuals": {
+        "Lebanon": {
+          "Dolphin": -4.354,
+          "Whale": 3.911,
+          "Monk seal": 3.298,
+          "Dugong": -2.352
+        },
+        "Syria": {
+          "Dolphin": -0.489,
+          "Whale": 0.959,
+          "Monk seal": -0.189,
+          "Dugong": -0.703
+        },
+        "Gaza": {
+          "Dolphin": 2.065,
+          "Whale": -2.044,
+          "Monk seal": -0.139,
+          "Dugong": -0.685
+        },
+        "Egypt": {
+          "Dolphin": 3.651,
+          "Whale": -3.46,
+          "Monk seal": -3.218,
+          "Dugong": 3.163
+        }
+      },
+      "bonferroni_z_crit": 2.95517
+    },
+    "R3_unidentified_from_notes": {
+      "n": 306,
+      "chi2": 52.9828,
+      "dof": 9,
+      "p_asymptotic": 2.94489e-08,
+      "p_monte_carlo": 9.9995e-05,
+      "share_expected_below_5": 0.5,
+      "cramers_v": 0.240241,
+      "cramers_v_corrected": 0.219898,
+      "table": {
+        "Lebanon": {
+          "Dolphin": 88,
+          "Whale": 45,
+          "Monk seal": 14,
+          "Dugong": 0
+        },
+        "Syria": {
+          "Dolphin": 16,
+          "Whale": 6,
+          "Monk seal": 1,
+          "Dugong": 0
+        },
+        "Gaza": {
+          "Dolphin": 20,
+          "Whale": 0,
+          "Monk seal": 1,
+          "Dugong": 0
+        },
+        "Egypt": {
+          "Dolphin": 101,
+          "Whale": 8,
+          "Monk seal": 0,
+          "Dugong": 6
+        }
+      },
+      "adj_residuals": {
+        "Lebanon": {
+          "Dolphin": -5.21,
+          "Whale": 4.831,
+          "Monk seal": 3.245,
+          "Dugong": -2.379
+        },
+        "Syria": {
+          "Dolphin": -0.448,
+          "Whale": 0.86,
+          "Monk seal": -0.197,
+          "Dugong": -0.705
+        },
+        "Gaza": {
+          "Dolphin": 2.337,
+          "Whale": -2.321,
+          "Monk seal": -0.1,
+          "Dugong": -0.672
+        },
+        "Egypt": {
+          "Dolphin": 4.399,
+          "Whale": -4.24,
+          "Monk seal": -3.188,
+          "Dugong": 3.188
+        }
+      },
+      "bonferroni_z_crit": 2.95517
+    },
+    "R4_egypt_split_by_coast": {
+      "n": 280,
+      "chi2": 73.7177,
+      "dof": 12,
+      "p_asymptotic": 6.41585e-11,
+      "p_monte_carlo": 4.99975e-05,
+      "share_expected_below_5": 0.55,
+      "cramers_v": 0.296242,
+      "cramers_v_corrected": 0.272434,
+      "table": {
+        "Lebanon": {
+          "Dolphin": 83,
+          "Whale": 43,
+          "Monk seal": 14,
+          "Dugong": 0
+        },
+        "Syria": {
+          "Dolphin": 16,
+          "Whale": 5,
+          "Monk seal": 1,
+          "Dugong": 0
+        },
+        "Gaza": {
+          "Dolphin": 20,
+          "Whale": 0,
+          "Monk seal": 1,
+          "Dugong": 0
+        },
+        "Egypt (Mediterranean)": {
+          "Dolphin": 56,
+          "Whale": 7,
+          "Monk seal": 0,
+          "Dugong": 0
+        },
+        "Egypt (Red Sea)": {
+          "Dolphin": 28,
+          "Whale": 1,
+          "Monk seal": 0,
+          "Dugong": 5
+        }
+      },
+      "adj_residuals": {
+        "Lebanon": {
+          "Dolphin": -4.952,
+          "Whale": 4.482,
+          "Monk seal": 3.09,
+          "Dugong": -2.256
+        },
+        "Syria": {
+          "Dolphin": 0.025,
+          "Whale": 0.333,
+          "Monk seal": -0.246,
+          "Dugong": -0.659
+        },
+        "Gaza": {
+          "Dolphin": 2.426,
+          "Whale": -2.382,
+          "Monk seal": -0.195,
+          "Dugong": -0.642
+        },
+        "Egypt (Mediterranean)": {
+          "Dolphin": 3.309,
+          "Whale": -2.004,
+          "Monk seal": -2.22,
+          "Dugong": -1.216
+        },
+        "Egypt (Red Sea)": {
+          "Dolphin": 1.373,
+          "Whale": -2.653,
+          "Monk seal": -1.531,
+          "Dugong": 6.069
+        }
+      },
+      "bonferroni_z_crit": 3.02334
+    },
+    "R5_mediterranean_only": {
+      "n": 246,
+      "chi2": 26.8668,
+      "dof": 6,
+      "p_asymptotic": 0.000153367,
+      "p_monte_carlo": 0.00039998,
+      "share_expected_below_5": 0.416667,
+      "cramers_v": 0.233682,
+      "cramers_v_corrected": 0.206667,
+      "table": {
+        "Lebanon": {
+          "Dolphin": 83,
+          "Whale": 43,
+          "Monk seal": 14
+        },
+        "Syria": {
+          "Dolphin": 16,
+          "Whale": 5,
+          "Monk seal": 1
+        },
+        "Gaza": {
+          "Dolphin": 20,
+          "Whale": 0,
+          "Monk seal": 1
+        },
+        "Egypt (Mediterranean)": {
+          "Dolphin": 56,
+          "Whale": 7,
+          "Monk seal": 0
+        }
+      },
+      "adj_residuals": {
+        "Lebanon": {
+          "Dolphin": -4.715,
+          "Whale": 3.615,
+          "Monk seal": 2.555
+        },
+        "Syria": {
+          "Dolphin": 0.172,
+          "Whale": 0.044,
+          "Monk seal": -0.39
+        },
+        "Gaza": {
+          "Dolphin": 2.549,
+          "Whale": -2.571,
+          "Monk seal": -0.339
+        },
+        "Egypt (Mediterranean)": {
+          "Dolphin": 3.605,
+          "Whale": -2.484,
+          "Monk seal": -2.427
+        }
+      },
+      "bonferroni_z_crit": 2.86526
+    },
+    "R6_possible_duplicates_removed": {
+      "n": 287,
+      "chi2": 50.1835,
+      "dof": 9,
+      "p_asymptotic": 9.94953e-08,
+      "p_monte_carlo": 4.99975e-05,
+      "share_expected_below_5": 0.5,
+      "cramers_v": 0.241423,
+      "cramers_v_corrected": 0.219778,
+      "table": {
+        "Lebanon": {
+          "Dolphin": 82,
+          "Whale": 43,
+          "Monk seal": 13,
+          "Dugong": 0
+        },
+        "Syria": {
+          "Dolphin": 14,
+          "Whale": 5,
+          "Monk seal": 1,
+          "Dugong": 0
+        },
+        "Gaza": {
+          "Dolphin": 20,
+          "Whale": 0,
+          "Monk seal": 1,
+          "Dugong": 0
+        },
+        "Egypt": {
+          "Dolphin": 94,
+          "Whale": 8,
+          "Monk seal": 0,
+          "Dugong": 6
+        }
+      },
+      "adj_residuals": {
+        "Lebanon": {
+          "Dolphin": -5.06,
+          "Whale": 4.792,
+          "Monk seal": 3.072,
+          "Dugong": -2.382
+        },
+        "Syria": {
+          "Dolphin": -0.332,
+          "Whale": 0.642,
+          "Monk seal": -0.047,
+          "Dugong": -0.678
+        },
+        "Gaza": {
+          "Dolphin": 2.371,
+          "Whale": -2.344,
+          "Monk seal": -0.099,
+          "Dugong": -0.696
+        },
+        "Egypt": {
+          "Dolphin": 4.118,
+          "Whale": -4.019,
+          "Monk seal": -3.09,
+          "Dugong": 3.187
+        }
+      },
+      "bonferroni_z_crit": 2.95517
+    }
+  }
+}

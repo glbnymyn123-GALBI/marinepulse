@@ -1,0 +1,15 @@
+sheet_row,issue,detail
+13,possible duplicate,same post as row 12
+24,possible duplicate,same post as row 23
+90,possible duplicate,same post as row 85
+94,possible duplicate,same post as row 93
+104,possible duplicate,same post as row 103
+171,invalid date,'22/05/202' cannot be read as DD/MM/YYYY
+218,possible duplicate,same post as row 145
+276,possible duplicate,same post as row 260
+284,possible duplicate,same post as row 248
+287,possible duplicate,same post as row 134
+304,invalid coordinates,"'532534942, 35.651266022468235' is outside the globe; record kept but not mapped"
+353,empty row,"no source, date or species; excluded from the analysis"
+354,empty row,"no source, date or species; excluded from the analysis"
+355,empty row,"no source, date or species; excluded from the analysis"

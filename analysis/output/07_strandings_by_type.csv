@@ -1,0 +1,5 @@
+type,stranded,n,rate,ci_low,ci_high
+Dolphin,28,217,0.129,0.0908,0.1802
+Whale,4,56,0.0714,0.0281,0.1698
+Monk seal,0,16,0.0,0.0,0.1936
+Dugong,0,6,0.0,0.0,0.3903
