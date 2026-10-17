@@ -1,5 +1,7 @@
 # MarinePulse: marine mammal sightings in the Levant
 
+**Live dashboard: [glbnymyn123-galbi.github.io/marinepulse](https://glbnymyn123-galbi.github.io/marinepulse/)**
+
 An interactive map and statistical analysis of 351 public reports of dolphins, whales, Mediterranean monk seals and dugongs from Lebanon, Syria, Gaza and Egypt (2014 to August 2026). Built during a research project for IMMRAC (Israeli Marine Mammal Research and Assistance Center).
 
 The research question: **does each mammal type turn up differently from country to country, and are those differences larger than chance would produce?**
